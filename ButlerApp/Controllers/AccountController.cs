@@ -20,7 +20,11 @@ namespace ButlerApp.Controllers
             _context = context;
         }
         [HttpGet]
-
+        public IActionResult Profile()
+        {
+            return View();
+        }
+        [HttpGet]
         public IActionResult Login()
         {
             var responce = new LoginVM();

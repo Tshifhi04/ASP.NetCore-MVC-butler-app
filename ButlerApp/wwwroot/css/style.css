@@ -16,6 +16,14 @@
     background: #0A2558;
     transition: all 0.2s ease;
 }
+table, th, td {
+    border: 0.3px solid;
+    padding: 2px;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
 .sidebar.active{
   width: 400px;
 }
@@ -91,12 +99,12 @@
 .home-section nav{
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 90px;
   background: #fff;
   display: flex;
   align-items: center;
   position: fixed;
-  width: calc(100% - 2px);
+  width: calc(100% - 20px);
   left: 10px;
   
   z-index: 100;
@@ -105,8 +113,8 @@
   transition: all 0.5s ease;
 }
 .sidebar.active ~ .home-section nav{
-  left: 200px;
-  width: calc(100% - 200px);
+  left: 300px;
+  width: calc(100% - 320px);
 }
 .home-section nav .sidebar-button{
   display: flex;
@@ -179,7 +187,9 @@ nav .profile-details i{
 }
 .home-section .home-content{
   position: relative;
-  padding-top: 104px;
+  padding-top: 14px;
+  width:100%;
+  
 }
 .home-content .overview-boxes{
   display: flex;
@@ -189,15 +199,16 @@ nav .profile-details i{
   padding: 0 20px;
   margin-bottom: 26px;
 }
-.overview-boxes .box{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: calc(100% / 4 - 15px);
-  background: #fff;
-  padding: 15px 14px;
-  border-radius: 12px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+.overview-boxes .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 5 - 25px);
+    background: #fff;
+    padding: 15px 14px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    margin-top: 95px;
 }
 .overview-boxes .box-topic{
   font-size: 20px;
