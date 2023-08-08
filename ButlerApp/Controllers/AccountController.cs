@@ -24,12 +24,16 @@ namespace ButlerApp.Controllers
         {
             return View();
         }
+
+
         [HttpGet]
         public IActionResult Login()
         {
             var responce = new LoginVM();
             return View(responce);
         }
+
+
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM loginVM)
         {

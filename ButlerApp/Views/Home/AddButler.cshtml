@@ -1,0 +1,257 @@
+﻿@model ButlerApp.ViewModel.ButlerVM
+
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Responsiive Admin Dashboard | CodingLab</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Boxicons CDN Link -->
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+
+
+</head>
+<body>
+
+    <!--<div class="sidebar">
+        <div class="logo-details">
+            <i class="bx bxl-c-plus-plus"></i>
+            <span class="logo_name">Butler Studio</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="active">
+                    <i class="bx bx-grid-alt"></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-box"></i>
+                    <span class="links_name">Product</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-list-ul"></i>
+                    <span class="links_name">Order list</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-pie-chart-alt-2"></i>
+                    <span class="links_name">Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-coin-stack"></i>
+                    <span class="links_name">Stock</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-book-alt"></i>
+                    <span class="links_name">Total order</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-user"></i>
+                    <span class="links_name">Team</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-message"></i>
+                    <span class="links_name">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-heart"></i>
+                    <span class="links_name">Favrorites</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bx-cog"></i>
+                    <span class="links_name">Setting</span>
+                </a>
+            </li>
+            <li class="log_out">
+                <a href="#">
+                    <i class="bx bx-log-out"></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>-->
+    <section class="home-section">
+        <!--
+        <nav>
+
+            <div class="sidebar-button">
+                <i class="bx bx-menu sidebarBtn"></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <i class="bx bx-search"></i>
+            </div>
+            <div class="profile-details">
+                   
+                <span class="admin_name">Tshifhiwa Nevhuhulwi</span>
+                <i class="bx bx-chevron-down"></i>
+            </div>
+        </nav>
+        -->
+
+       <form method="post" asp-action="AddButler" enctype="multipart/form-data">
+        <div class="home-content" style="overflow-y: auto;margin-bottom:100px;">
+
+
+            <div class="container rounded bg-white mt-5 mb-4">
+                <div class="row">
+                    <div class="col-md-3 border-right" style="margin-top:1px">
+
+                            <div class="form-group">
+                                <label asp-for="image">Image</label>
+                                <input asp-for="image" class="form-control" placeholder="Image">
+                                <span asp-validation-for="image" class="text-bg-danger"></span>
+                            </div>
+                          
+                    </div>
+                    
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" placeholder="Whats the butlers name?">
+        <span asp-validation-for="Name" class="text-bg-danger"></span>
+    </div>
+    <div class="form-group">
+                            <label asp-for="Email">Email</label>
+                            <input asp-for="Email" class="form-control" placeholder="Email">
+                            <span asp-validation-for="Email" class="text-bg-danger"></span>
+    </div>
+ 
+  
+    <div class="form-group">
+                            <label asp-for="PhoneNumber">PhoneNumber</label>
+                            <input asp-for="PhoneNumber" class="form-control" placeholder="PhoneNumber">
+                            <span asp-validation-for="PhoneNumber" class="text-bg-danger"></span>
+    </div>
+
+                        <div class="form-group">
+                            <label asp-for="Profession">Profession</label>
+                            <input asp-for="Profession" class="form-control" placeholder="Profession">
+                            <span asp-validation-for="Profession" class="text-bg-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="status">status</label>
+                            <input asp-for="status" class="form-control" placeholder="status">
+                            <span asp-validation-for="status" class="text-bg-danger"></span>
+                        </div>
+                         <div class="form-group">
+                            <label asp-for="skillSet">skillSet</label>
+                            <input asp-for="skillSet" class="form-control" placeholder="skillSet">
+                            <span asp-validation-for="skillSet" class="text-bg-danger"></span>
+                        </div>
+
+                    
+
+                        <div class="form-group">
+                            <label asp-for="Address.Name">Address Name</label>
+                            <input asp-for="Address.Name" class="form-control" placeholder="Address Name">
+                            <span asp-validation-for="Address.Name" class="text-bg-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address.City">Profession</label>
+                            <input asp-for="Address.City" class="form-control" placeholder="Address.City">
+                            <span asp-validation-for="Address.City" class="text-bg-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Address.Province">Address.Province</label>
+                            <input asp-for="Address.Province" class="form-control" placeholder="Address.Province">
+                            <span asp-validation-for="Address.Province" class="text-bg-danger"></span>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label asp-for="Rating">Rating</label>
+                            <input asp-for="Rating" class="form-control" placeholder="Rating">
+                            <span asp-validation-for="Rating" class="text-bg-danger"></span>
+
+                        </div>
+                      
+
+
+
+
+
+
+                        
+
+
+   </form>
+
+                    <div class="col-md-4" style="margin-top:10px">
+                       
+
+                            <button class="not-so-rounded-button" asp-area="" asp-action="AddButler" asp-controller="Home">Add Butler</button><br />
+                            <!-- <div class="col-md-4">
+                             <div class="p-3 py-5">
+                                 <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                                 <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                                 <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+                             </div>
+                             -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+  
+
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function () {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

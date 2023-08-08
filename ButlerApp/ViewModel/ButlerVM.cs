@@ -1,12 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations;
+﻿using ButlerApp.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ButlerApp.Models
+namespace ButlerApp.ViewModel
 {
-    public class Butler
+    public class ButlerVM
     {
-        [Key]
+
+
         public string Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
@@ -19,9 +19,8 @@ namespace ButlerApp.Models
         public string AddressId { get; set; }
 
         public Address Address { get; set; }
-        public string? image { get; set; }
+        public IFormFile image { get; set; }
         public string status { get; set; }
         public string Rating { get; set; }
-
     }
 }
